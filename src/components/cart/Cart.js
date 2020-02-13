@@ -14,6 +14,7 @@ export default class Cart extends Component{
                     {(value) =>{
                         
                         
+                        
                         const {cart} = value;
                         if(cart.length>0){
                            return(
@@ -21,7 +22,8 @@ export default class Cart extends Component{
                                     <Title name="your" title="cart" />
                                     <CartColumns />
                                     <CartList value={value} />
-                                    <CartTotals value={value} />
+                                    <CartTotals value={value} history={this.props.location} />
+                                
                                </React.Fragment>
                            ) 
                         }else {
